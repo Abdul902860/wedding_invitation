@@ -88,7 +88,7 @@ button{font:inherit}
         <div class="cover-front">
           <div class="cover-content">
             <div class="arabic">☾ ✦ ☽</div>
-            <div class="kicker" style="color:#f2d88f">You are cordially invited</div>
+            <div class="kicker" style="color:#f2d88f">You are cordially invited from Mr and Mrs Mulla Family</div>
             <div class="script">The Wedding<br>Invitation</div>
             <div class="rule" style="background:#d9b765"></div>
             <h2>ABDUL RAHIM & SAMEERA</h2>
@@ -121,7 +121,11 @@ button{font:inherit}
   </section>
 
   <section class="slide" data-title="With Compliments">
-    <div class="inner"><div class="kicker">With best compliments</div><div class="script">Mulla Family</div><div class="rule"></div><div class="kicker">Our beloved bhanje & bhatije</div><p class="children">Umaima Mehsuldar ✦ Haidar Mehsuldar ✦ Laiba Mehsuldar<br>Rida Mulla ✦ Zakwan Mulla</p><div class="rule"></div><div class="kicker">For any information</div><div class="bigdate" style="font-size:clamp(19px,3vw,28px);line-height:1.8">9975233656<br>7770005250<br>9309072962</div></div>
+    <div class="inner"><div class="kicker">With best compliments</div>
+      <div class="script">Mulla Family</div>
+      <div class="inner">Salim Mulla ✦ Maula Mulla ✦ Abrar Mulla ✦Nasir Shaikh ✦ Mohammed Ali Mehsuldar ✦ Saifan Mulla ✦ Danish Mulla ✦</div>
+      <div class="rule"></div>
+      <div class="kicker">Our beloved bhanje & bhatije</div><p class="children">Umaima Mehsuldar ✦ Haidar Mehsuldar ✦ Laiba Mehsuldar<br>Rida Mulla ✦ Zakwan Mulla</p><div class="rule"></div><div class="kicker">For any information</div><div class="bigdate" style="font-size:clamp(19px,3vw,28px);line-height:1.8">9975233656<br>7770005250<br>9309072962</div></div>
   </section>
 
   <section class="slide" data-title="The Blessing">
@@ -154,7 +158,7 @@ function prevSlide(){goTo(current-1)}
 function openBook(){document.getElementById('coverFlap').classList.add('open');setTimeout(()=>{if(current===0)goTo(1)},950)}
 function toggleAuto(){if(autoOn){clearInterval(autoTimer);autoTimer=null;autoOn=false;document.getElementById('playBtn').textContent='▶'}else{autoOn=true;document.getElementById('playBtn').textContent='Ⅱ';if(current===0)openBook();autoTimer=setInterval(()=>{if(current===slides.length-1){clearInterval(autoTimer);autoTimer=null;autoOn=false;document.getElementById('playBtn').textContent='▶'}else goTo(current+1)},5500)}}
 function shareInvite(){const data={title:'Abdul Rahim & Sameera | Dawat-e-Walima',text:'You are cordially invited to our Dawat-e-Walima on Sunday, 22 November 2026, 12:00 PM to 4:00 PM at Momin Jamat Khana Hall, Samad Nagar, Bhiwandi.',url:location.href};if(navigator.share)navigator.share(data);else if(navigator.clipboard)navigator.clipboard.writeText(location.href).then(()=>alert('Invitation link copied!'))}
-function musicInfo(){alert('To add your preferred wedding nasheed, place an audio file named wedding-nasheed.mp3 in the same folder and add an audio player.')}
+function musicInfo(){alert('To add your preferred wedding nasheed, place an audio file named wedding-nasheed.mp3.mpeg in the same folder and add an audio player.')}
 document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();nextSlide()}if(e.key==='ArrowLeft')prevSlide()});
 let touchX=0;document.addEventListener('touchstart',e=>touchX=e.changedTouches[0].screenX,{passive:true});document.addEventListener('touchend',e=>{let dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>65){dx<0?nextSlide():prevSlide()}},{passive:true});
 update();
